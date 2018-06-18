@@ -9,7 +9,7 @@
         <%= @question.description %>
         </div>
       </div>
-      <h2>Answers</h2>
+      <h2>Answers (<%= @question.answers.length  %>)</h2> 
       <div class="jumbotron">
       <% @question.answers.each do |content| %>
         <div class="thumbnail">

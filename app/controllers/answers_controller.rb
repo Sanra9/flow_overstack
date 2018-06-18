@@ -6,6 +6,12 @@ class AnswersController < ApplicationController
     redirect_to question_path(@question)
   end
 
+  def destroy
+    question = Question.find(params[:question_id])
+    question.answers.destroy
+    redirect_to root_path
+  end
+
 
 
   private
