@@ -18,7 +18,8 @@ class QuestionsController < ApplicationController
 
   def destroy
     question = Question.find(params[:id])
-    question.destroy
+    question.destroy   
+
     redirect_to root_path
   end
 
@@ -33,6 +34,10 @@ class QuestionsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def show
+    @question = Question.find(params[:id])
   end
 
   private
